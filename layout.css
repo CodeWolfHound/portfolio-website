@@ -1,0 +1,56 @@
+body {
+    /* background-image: url("Images/27SecBattleFixed.gif");
+    background-size: auto; /* Width fills viewport, height stays natural
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed; */
+    overflow: hidden;
+    cursor: url("Images/w101wandCursor.cur"), auto;
+}
+audio {
+    position: fixed; /* Takes it out of normal flow, relative to viewport */
+    bottom: 850px;    /* 20 pixels from the bottom of the screen */
+    right: 20px;     /* 20 pixels from the right of the screen */
+    z-index: 1000;   /* Ensures it stays on top of other content */
+}
+.mycards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh; 
+  z-index:1000 ;
+  /* border: 2px solid rgb(194, 236, 7); */
+}
+.borderd {
+  /*border: 2px solid rgb(194, 236, 7);
+  outline: 2px solid rgb(248, 10, 10);*/
+  height: auto;
+  transform: translate(45px,-86px);
+}
+.card {
+  height: 130px;
+  margin: 3px;
+}
+img {
+  transition: transform 0.3s;
+}
+img:hover {
+  transform: scale(1.5);      /* Scales image to 120% */
+  transition: transform 0.3s; /* Smooth animation */
+}
+a:hover {
+  cursor: url("Images/w101wandCursor.cur"), auto;
+}
+#bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  /* min-width: 100vw;
+  min-height: 100vh; */
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
