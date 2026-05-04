@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- Menitons its using HTML5-->
+<html> <!-- Start of my webpage-->
+<head> <!-- defines the page's title, character set, links to stylesheets, and scripts-->
+    <meta charset="UTF-8" /> <!-- Universal computer letter property-->
+    <title>Portfolio</title><!-- Bookmark name-->
+    <link rel="stylesheet" href="layout.css"> <!-- links the location of the casscading style sheet-->
+    <link rel="icon" sizes="48x48" href="Images/Ice.png"> <!-- Sets icon for bookmark -->
+    <style type="text/css">
+</style>
+</head>
+<body><!-- Information between body is displayed on screen-->
+<video autoplay muted loop id="bgVideo">
+    <source src="Images/Battle.mp4" type="video/mp4">
+</video>
+    <audio id="hoverSound" style="display: none;">
+    <source src="Audio/SpellHover.wav" type="audio/mpeg" >
+    </audio>
+    <audio controls id="myAudio" autoplay loop>
+    <source src="Audio/Wizard101BattleTheme.mp3" type="audio/mpeg" >
+</audio>
+    <div class="mycards">
+        <div class="borderd">
+            <a href="https://github.com/CodeWolfHound" target="_blank" class="image-click-link" id="image-git-link">
+                <img src="Images/github wizard101.jpg" class="card" alt="Link to github">
+            </a>
+            <a href="https://clumsybonesstudio.itch.io/" target="_blank" class="image-click-link" id="image-itch-link">
+                <img src="Images/itch wizard101.jpg" class="card" alt="Link to itch">
+            </a>
+            <a href="https://www.linkedin.com/in/reeni-rivera/" target="_blank" class="image-click-link" id="image-linkedin-link">
+                <img src="Images/LinkedInWizard101.jpg" class="card" alt="Link to linked in">
+            </a>
+        </div>
+    </div>
+<script>//Plays music when page starts
+  document.addEventListener('DOMContentLoaded', function() {
+  var audio = document.getElementById('myAudio');
+  audio.volume = 0.02; // Set volume to 20%
+  audio.play();
+});
+</script>
+<script>//Plays audio sound when hovering over card 
+document.addEventListener('DOMContentLoaded', function() {
+  var audio = document.getElementById('hoverSound');
+  document.querySelectorAll('img').forEach(function(img) {
+    img.addEventListener('mouseenter', function() {
+      audio.currentTime = 0; // Restart sound
+      audio.volume = 0.3
+      audio.play();
+    });
+  });
+});
+</script>
+</body>
+</html><!-- end of my webpage-->

@@ -1,54 +1,77 @@
-<!DOCTYPE html> <!-- Menitons its using HTML5-->
-<html> <!-- Start of my webpage-->
-<head> <!-- defines the page's title, character set, links to stylesheets, and scripts-->
-    <meta charset="UTF-8" /> <!-- Universal computer letter property-->
-    <title>Portfolio</title><!-- Bookmark name-->
-    <link rel="stylesheet" href="layout.css"> <!-- links the location of the casscading style sheet-->
-    <link rel="icon" sizes="48x48" href="Images/Ice.png"> <!-- Sets icon for bookmark -->
-    <style type="text/css">
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reenis Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
-<body><!-- Information between body is displayed on screen-->
-<video autoplay muted loop id="bgVideo">
-    <source src="Images/Battle.mp4" type="video/mp4">
-</video>
-    <audio id="hoverSound" style="display: none;">
-    <source src="Audio/SpellHover.wav" type="audio/mpeg" >
-    </audio>
-    <audio controls id="myAudio" autoplay loop>
-    <source src="Audio/Wizard101BattleTheme.mp3" type="audio/mpeg" >
-</audio>
-    <div class="mycards">
-        <div class="borderd">
-            <a href="https://github.com/CodeWolfHound" target="_blank" class="image-click-link" id="image-git-link">
-                <img src="Images/github wizard101.jpg" class="card" alt="Link to github">
-            </a>
-            <a href="https://clumsybonesstudio.itch.io/" target="_blank" class="image-click-link" id="image-itch-link">
-                <img src="Images/itch wizard101.jpg" class="card" alt="Link to itch">
-            </a>
-            <a href="https://www.linkedin.com/in/reeni-rivera/" target="_blank" class="image-click-link" id="image-linkedin-link">
-                <img src="Images/LinkedInWizard101.jpg" class="card" alt="Link to linked in">
-            </a>
-        </div>
-    </div>
-<script>//Plays music when page starts
-  document.addEventListener('DOMContentLoaded', function() {
-  var audio = document.getElementById('myAudio');
-  audio.volume = 0.02; // Set volume to 20%
-  audio.play();
-});
-</script>
-<script>//Plays audio sound when hovering over card 
-document.addEventListener('DOMContentLoaded', function() {
-  var audio = document.getElementById('hoverSound');
-  document.querySelectorAll('img').forEach(function(img) {
-    img.addEventListener('mouseenter', function() {
-      audio.currentTime = 0; // Restart sound
-      audio.volume = 0.3
-      audio.play();
-    });
-  });
-});
-</script>
+<body>
+    
+    <header>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section id="hero">
+            <div class="hero-content">
+                <img src="images/profile.jpeg" alt="Reeni A Rivera" class="profile-img"/>
+                <div class="hero-text">
+                    <h1>Reeni A Rivera</h1>
+                    <p>Software Solutions Engineer 
+                        <a href="https://www.zoho.com/" target="_blank" rel="noopener noreferrer">Zoho Corporation</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>Hello, I'm a self-taught programmer who is currently pursuing my Bachelor's in Software Engineering. Most of my coding experience comes from debugging and developing daily programming automation scripts for businesses and customers. I used to primarily work in the IT sector, where I repaired Windows, Mac, and Android devices, and progressed to maintaining networks through hardware and software diagnostics, remote device support, managing student and staff information, and keeping devices secure and tracked.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <ul class="project-list">
+                <li>
+                    <a href="https://clumsybonesstudio.itch.io/boos-flight" target="_blank" rel="noopener noreferrer">Game - Boo's Flight</a>
+                    <p>A small game built with C# on how to use the Unity engine.</p>
+                </li>
+                <li>
+                    <a href="https://github.com/CodeWolfHound/portfolio-website" target="_blank" rel="noopener noreferrer">Portfolio Website</a>
+                    <p>The website code needed to make this website from scratch.</p>
+                </li>
+                <li>
+                    <a href="https://github.com/CodeWolfHound/TeachAPI" target="_blank" rel="noopener noreferrer">TeachAPI</a>
+                    <p>My proof of concept REST API made in Python with the Flask micro-framework.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="goals">
+            <h2>My Goal</h2>
+            <p>Currently, I am looking for opportunities to specialize in a back-end engineering position. Much of my learning is centered around automating processes and creating connections to other applications and APIs. I am also open to other opportunities in similar or different areas of interest. All development experience is valuable experience, as it all contributes to my growth toward becoming a full-stack developer. </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:rivera.reeni@gmail.com">rivera.reeni@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/reeni-rivera/" target="_blank" rel="noopener noreferrer">Click me!</a></p>
+            <p>GitHub: <a href="https://github.com/CodeWolfHound" target="_blank" rel="noopener noreferrer">Check my code!</a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Reeni A Rivera</p>
+    </footer>
+
 </body>
-</html><!-- end of my webpage-->
+</html>

@@ -1,16 +1,12 @@
 
 ## ABOUT
 
-This is my portfolio code source from scratch. Built this for fundamental understanding of webpages without using a prebuilt library.
+This is my portfolio source code. Built this for fundamental understanding of website building and dns hosting.
 
 
 ## BUILT WITH
-Java, HTML, CSS
+Languages - HTML, CSS.
+DNS Provider - Name.com
+GitHub Pages - Hosts source code and deploys webpage.
 
 
-## DNS PROVIDER
-name.com
-
-
-## DEPLOYMENT
-Azure — runs and deploys code from my GitHub repo to the server.
